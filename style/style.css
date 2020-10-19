@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Mobile first*/
+
+.contenedor{
+    width: 100%;
+    min-width: 350px;
+
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+}
+header{
+    width: 100%;
+    padding: 10px 0px;
+    
+    /*flex*/
+    display: flex;
+    justify-content:space-between;
+}
+.logo{
+    padding: 0px 10px;
+}
+
+/*Menu*/
+
+
+.lbl-menu{
+    width: 60px;
+    height: 3px;
+    position: relative;
+    right: 30px;
+}
+
+.lbl-menu #span1,#span2,#span3{
+    position: absolute;
+    content: "";
+    background: black;
+    width: 18px;
+    height: 2px;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+#span2{
+    top: 7px;
+}
+#span3{
+    top: 14px;
+}
+
+#btn-menu{
+    display: none;
+}
+
+#btn-menu:checked ~ .lbl-menu #span1{
+    transform: rotate(140deg);
+    top: 10px;
+}
+
+#btn-menu:checked ~ .lbl-menu #span2{
+  opacity: 0;
+}
+
+#btn-menu:checked ~ .lbl-menu #span3{
+    transform: rotate(-140deg);
+    top: 10px;
+}
+
+
+ul{
+    list-style: none;
+}
+
+.menu{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    margin-top: 35px;
+    display: none;
+    background-color: #0000EC;
+}
+
+.menu ul li>a{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #ffffff;
+    font-size: 16px;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+#btn-menu:checked ~ .menu{
+    display: block;
+    
+}
+
+ .conoceMas{
+    width: 100%;   
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+}
+h1{
+    font-size: 39px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #060A24;
+    padding: 10px;
+}
+h1 span {
+    text-decoration: line-through;
+    display: inline-block;
+}
+
+h1 span:last-child {
+    text-decoration: none; 
+}
+
+p{
+    max-width: 360px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#texto:before{
+    content: "Un podcast";  
+}
+
+.boton{
+    background:#00F3BB;
+    width: 100%;
+    max-width: 288px;
+    max-height: 48px;
+    padding: 20px ;
+    margin: 30px 10px 15px 15px;
+    color: #060A24;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+.episodios>h2 {
+    font-size: 36px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #FFFFFF;
+    margin: 0px;
+    padding-inline-start: 10px;
+}
+
+.episodios{
+    width: 100%;
+    margin: 0px;
+    padding: 80px 0px;
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+    /*fondo*/
+    background: rgba(0,0,255,1);
+    background: -moz-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 29%, rgba(0,0,163,1) 76%, rgba(0,0,163,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(29%, rgba(0,0,255,1)), color-stop(76%, rgba(0,0,163,1)), color-stop(100%, rgba(0,0,163,1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 29%, rgba(0,0,163,1) 76%, rgba(0,0,163,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 29%, rgba(0,0,163,1) 76%, rgba(0,0,163,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 29%, rgba(0,0,163,1) 76%, rgba(0,0,163,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 29%, rgba(0,0,163,1) 76%, rgba(0,0,163,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#0000a3', GradientType=0 );
+    /*poligono*/
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+.episodios iframe{
+    margin: 0px;
+    padding: 5px 10px;
+    height: 125px;
+    border: 0;
+}
+
+.phone{
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+}
+
+h2{
+    font-size: 36px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 10px;
+    display: inline-block;
+    padding: 0px 10px;
+    color: #060A24;
+}
+
+.phone img{
+    position:sticky;
+    width: 100%;
+    margin-top: -65px;
+}
+.invitados{
+    width: 100%;
+
+    /*flex*/
+    display: flex;
+    flex-flow: column; 
+}
+.invitados>img{
+    width: 100%;
+    margin: 0px;
+}
+
+.temas{
+    width: 100%;    
+    height: auto;
+    
+    /*flex*/
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: "titulo titulo titulo"
+                        ". icono1 ."
+                        ". icono2 ."
+                        ". icono3 ."
+                        ". icono3 ."
+                        ". icono4 .";
+}
+
+.temas> h2{
+   grid-area: titulo;
+}
+
+.temas .icono1{
+    grid-area: icono1;
+    text-align: center;
+}
+
+.temas .icono2{
+    text-align: center;
+    grid-area: icono2;
+}
+
+.temas .icono3{
+    text-align: center;
+    grid-area: icono3;
+}
+
+.temas .icono4{
+    text-align: center;
+    grid-area: icono4;
+}
+
+.novedades{    
+    padding: 70px 0px 30px 0px;
+    /*fondo gradiente*/ 
+    background: rgba(0,0,255,1);
+    background: -moz-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 31%, rgba(0,0,163,1) 85%, rgba(0,0,163,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,255,1)), color-stop(31%, rgba(0,0,255,1)), color-stop(85%, rgba(0,0,163,1)), color-stop(100%, rgba(0,0,163,1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 31%, rgba(0,0,163,1) 85%, rgba(0,0,163,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 31%, rgba(0,0,163,1) 85%, rgba(0,0,163,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 31%, rgba(0,0,163,1) 85%, rgba(0,0,163,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,255,1) 0%, rgba(0,0,255,1) 31%, rgba(0,0,163,1) 85%, rgba(0,0,163,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#0000a3', GradientType=0 );
+    /*poligono*/
+    clip-path: polygon(0 18%, 100% 5%, 100% 100%, 0% 100%);
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center
+}
+.novedades> h2{
+    color: #FFFFFF ;
+    text-align: center;
+}
+
+footer{
+    width: 100%;
+    /*flex*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+footer div>P{
+    padding: 0px;
+    text-align: center;
+}
+
+.redes{
+    padding: 15px 0px 30px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.redes>a{
+color: black;
+}
+
+/*escritorio*/
+/*************************************************************************************************/
+@media only screen and (min-width: 1220px){
+    
+    .header{
+        flex-flow: row wrap;
+    }
+
+    .logo{
+        padding: 0px 30px;
+    }
+    
+    /*Menu*/
+    .lbl-menu{
+        display: none;
+    }
+    
+    .menu{
+        width: 100%;
+        position: initial;
+        /*flex*/
+        display: flex;
+        margin-top: 0px;
+        background-color: #ffffff;
+    }
+    .menu ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+    
+    .menu ul li>a{
+        font-family: 'IBM Plex Mono', monospace;
+        color: #060A24;
+        font-size: 16px;
+        display: inline-block;
+        padding: 15px 20px;
+        text-decoration: none;
+    }
+    
+    .btma:hover{
+        color: #00F3BB;
+        text-decoration: line-through;
+    }
+    .btma:active{
+        color: grey;
+    }     
+    
+    h1{
+        padding: 10px 6%;
+    }
+
+    h1 span:last-child {
+        text-decoration: none;
+        color: #0000EC;
+    }
+   
+    p{
+        max-width: 464px;
+    }
+    .conoceMas>p{
+        padding: 10px 6%;
+        max-width: 628px;
+       
+    }
+    
+    #texto:before{
+        content: "El portal de podcasts";  
+    }
+    
+    .boton{
+        margin-left: 6%;
+    }
+    .boton:hover{
+        background: rgba(0,240,184,1);
+        background: -moz-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,240,184,1)), color-stop(100%, rgba(0,0,254,1)));
+        background: -webkit-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+        background: -o-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+        background: -ms-linear-gradient(left, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+        background: linear-gradient(to right, rgba(0,240,184,1) 0%, rgba(0,0,254,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f0b8', endColorstr='#0000fe', GradientType=1 );
+        color: #ffffff;
+        cursor: pointer;
+        }
+
+    .episodios{
+        width: 100%;
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: repeat(2,1f);
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: "titulo titulo "
+                                "ep1 ep2"
+                                "ep3 ep4";
+    }
+    
+    .episodios>h2 {
+        margin: 0px 6%;
+        grid-area: titulo;
+    }
+    
+    .episodios .ep1{
+        grid-area: ep1;
+        justify-self: center;
+     
+    }
+    
+    .episodios .ep2{
+        grid-area: ep2;
+        justify-self: center;
+    }
+
+    .episodios .ep3{
+        grid-area: ep3;
+        justify-self: center;
+    }
+    .episodios .ep4{
+        grid-area: ep4;
+        justify-self: center;
+    }
+
+    .episodios{          
+        /*fondo*/
+        background: rgba(0,0,163,1);
+        background: -moz-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,163,1)), color-stop(62%, rgba(0,0,255,1)), color-stop(100%, rgba(0,0,255,1)));
+        background: -webkit-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: linear-gradient(to right, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000a3', endColorstr='#0000ff', GradientType=1 );
+        clip-path: polygon(0 14%, 100% 0, 100% 90%, 0% 100%);
+    }
+    
+    .episodios iframe{
+        width: 75%;
+        height: 17vh;
+        border: 0;
+    }
+    
+    .phone{
+
+        flex-flow: row wrap;
+    }
+    .phone h2{
+        position: absolute;
+        margin-left: 40%;
+        margin-top: -1%;
+    }
+    .phone p{
+        padding: 20px;
+        margin-top: 1%;
+    }
+        
+    .phone img{
+        width: 20%;
+        margin-left: 17
+        %;
+    }
+    .invitados{
+        flex-flow: row wrap; 
+    }
+    .invitados h2{
+        margin: 4% 0px 10px 6%;
+        width: 100%;
+    }
+    .invitados>img{
+        width: 33.3%;
+    }
+    
+    .temas{
+        width: 100%;    
+        height: auto;
+        
+        /*flex*/
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "titulo titulo titulo titulo"
+                            " icono1 icono2 icono3 icono4 "
+                            ;
+    }
+    
+    .temas> h2{
+        margin: 2% 10px 10px 6%;
+       grid-area: titulo;
+    }
+    .temas .icono1{
+        grid-area: icono1;
+        text-align: center;
+    }
+    .temas .icono2{
+        text-align: center;
+        grid-area: icono2;
+    }
+    .temas .icono3{
+        text-align: center;
+        grid-area: icono3;
+    }
+    .temas .icono4{
+        text-align: center;
+        grid-area: icono4;
+    }
+    
+    .novedades{
+        /*fondo gradiente*/ 
+        background: rgba(0,0,163,1);
+        background: -moz-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,163,1)), color-stop(62%, rgba(0,0,255,1)), color-stop(100%, rgba(0,0,255,1)));
+        background: -webkit-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -o-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: -ms-linear-gradient(left, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        background: linear-gradient(to right, rgba(0,0,163,1) 0%, rgba(0,0,255,1) 62%, rgba(0,0,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000a3', endColorstr='#0000ff', GradientType=1 );
+        /*poligono*/
+        clip-path: polygon(0 18%, 100% 5%, 100% 100%, 0% 100%);
+        /*flex*/
+    
+    }
+    .novedades> h2{
+        color: #FFFFFF ;
+        text-align: center;
+    }
+    
+    footer{
+        padding: 2% 10px;
+        flex-flow: row wrap;
+        justify-content:space-between;
+    }
+    .boton2{
+        margin-left: 40%;
+    }
+    
+    .redes{
+        padding: 0px 0px 30px 0px;
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .redes>a{
+        padding: 30px;
+    }
+}
